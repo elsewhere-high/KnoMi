@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {
+      "id": "learning-demo",
+      "title": "从一个问题开始",
+      "titleEn": "Start with a question",
+      "description": "人工编写的演示内容，用于预览讲解与工作区；不包含真实用户记录。",
+      "tags": [
+        "合成示例",
+        "基础数学"
+      ],
+      "recordedAt": "2026-09-14",
+      "messageCount": 2
+    }
+  ]
+}

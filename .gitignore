@@ -1,0 +1,33 @@
+# Dependencies and generated output
+node_modules/
+dist/
+dist-electron/
+coverage/
+*.tsbuildinfo
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.cache/
+# Local state and credentials
+/runtime/
+/workspace/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+.DS_Store
+# Editor and temporary files
+.vscode/
+.idea/
+*.swp
+*.tmp
+
+# Isolated toolchain and local verification artifacts
+.conda-env/
+playwright-report/
+test-results/

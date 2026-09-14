@@ -1,0 +1,152 @@
+{
+	"name": "knomi",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Personal learning agent built on PI SDK with three-layer memory system",
+	"type": "module",
+	"workspaces": [
+		"apps/knomi",
+		"apps/knomi/web",
+		"apps/showcase"
+	],
+	"main": "electron/main.js",
+	"scripts": {
+		"test": "vitest run",
+		"eval:l2-retrieval": "tsx scripts/eval-l2-retrieval.ts",
+		"build": "npm --workspace knomi run build && npm --workspace knomi-web run build",
+		"start": "npm --workspace knomi run start --",
+		"sandbox": "npm --workspace knomi run start -- --sandbox",
+		"server": "npm --workspace knomi run server --",
+		"server:sandbox": "npm --workspace knomi run server -- --sandbox",
+		"web:dev": "npm --workspace knomi-web run dev",
+		"dev:server": "npm --workspace knomi run server --",
+		"restart": "bash restart-dev.sh",
+		"restart:fast": "bash restart-dev.sh --skip-build",
+		"electron": "electron .",
+		"electron:build": "npm run build && electron-builder --mac",
+		"electron:build:win": "npm run build && electron-builder --win",
+		"showcase:export": "tsx scripts/export-showcase-cases.ts",
+		"showcase:dev": "npm run dev --workspace knomi-showcase",
+		"showcase:build": "npm run build --workspace knomi-showcase",
+		"showcase:list": "tsx scripts/export-showcase-cases.ts --list",
+		"showcase:view": "node scripts/view-showcase-export.mjs"
+	},
+	"engines": {
+		"node": ">=20.6.0"
+	},
+	"build": {
+		"productName": "KnoMi",
+		"afterPack": "scripts/after-pack.cjs",
+		"directories": {
+			"output": "dist-electron"
+		},
+		"files": [
+			"electron/**/*",
+			"apps/knomi/dist/**/*",
+			"apps/knomi/web/dist/**/*",
+			"apps/knomi/presets/**/*",
+			"apps/knomi/scripts/**/*",
+			"!apps/knomi/scripts/**/__pycache__/**/*",
+			"apps/knomi/third-party/**/*",
+			"node_modules/**/*",
+			"!node_modules/.cache/**/*",
+			"build/icon.png",
+			"apps/knomi/package.json",
+			"LICENSE",
+			"vendor/*LICENSE*",
+			"vendor/THIRD_PARTY_NOTICES.md"
+		],
+		"asarUnpack": [
+			"**/node_modules/node-pty/**/*",
+			"**/node_modules/@homebridge/**/*",
+			"apps/knomi/presets/**/*",
+			"apps/knomi/scripts/**/*"
+		],
+		"mac": {
+			"target": [
+				{
+					"target": "dmg",
+					"arch": [
+						"arm64"
+					]
+				}
+			],
+			"category": "public.app-category.productivity",
+			"darkModeSupport": true,
+			"icon": "build/icon.icns"
+		},
+		"dmg": {
+			"title": "KnoMi"
+		},
+		"linux": {
+			"category": "Education",
+			"artifactName": "${name}-${version}-${arch}.${ext}",
+			"target": [
+				{
+					"target": "AppImage",
+					"arch": [
+						"arm64",
+						"x64"
+					]
+				}
+			],
+			"icon": "build/icon.png"
+		},
+		"win": {
+			"target": [
+				{
+					"target": "nsis",
+					"arch": [
+						"x64"
+					]
+				},
+				{
+					"target": "msi",
+					"arch": [
+						"x64"
+					]
+				}
+			],
+			"icon": "build/icon.png"
+		},
+		"nsis": {
+			"oneClick": false,
+			"allowToChangeInstallationDirectory": true,
+			"perMachine": false
+		},
+		"msi": {
+			"oneClick": false,
+			"perMachine": false
+		},
+		"appId": "app.knomi.desktop"
+	},
+	"devDependencies": {
+		"@tailwindcss/vite": "^4.1.7",
+		"@testing-library/dom": "^10.4.1",
+		"@testing-library/react": "^16.3.2",
+		"@types/node": "^24.3.0",
+		"concurrently": "^9.2.1",
+		"electron": "^42.3.0",
+		"electron-builder": "^26.8.1",
+		"jsdom": "^30.0.1",
+		"shx": "^0.4.0",
+		"tailwindcss": "^4.1.7",
+		"tsx": "^4.20.3",
+		"typescript": "^5.9.2",
+		"vite": "^6.3.5",
+		"vitest": "^3.2.4",
+		"xlsx": "file:./vendor/xlsx-0.20.3.tgz"
+	},
+	"overrides": {
+		"@larksuiteoapi/node-sdk": {
+			"axios": "^1.16.1"
+		},
+		"rimraf": "6.1.2",
+		"gaxios": {
+			"rimraf": "6.1.2"
+		},
+		"xlsx": "$xlsx"
+	},
+	"author": "Ustinian",
+	"license": "MIT"
+}

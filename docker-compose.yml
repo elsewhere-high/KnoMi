@@ -1,0 +1,16 @@
+services:
+  knomi:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      KNOMI_CONFIG_DIR: /etc/knomi
+      KNOMI_DATA_DIR: /var/lib/knomi/data
+      KNOMI_SKILLS_DIR: /var/lib/knomi/skills
+      KNOMI_WORKSPACE_DIR: /srv/knomi-workspace
+      KNOMI_PORT: 3000
+    volumes:
+      - ./runtime/config:/etc/knomi
+      - ./runtime/data:/var/lib/knomi/data
+      - ./runtime/skills:/var/lib/knomi/skills
+      - ./workspace:/srv/knomi-workspace

@@ -1,0 +1,87 @@
+{
+	"defaultProvider": "custom",
+	"defaultModel": "claude-sonnet-4-6",
+	"providers": {
+		"custom": {
+			"baseUrl": "https://api.example.invalid",
+			"api": "anthropic-messages",
+			"apiKey": "",
+			"authHeader": false,
+			"bypassProxy": false,
+			"models": [
+				{
+					"id": "claude-sonnet-4-6",
+					"name": "Claude Sonnet 4.6",
+					"reasoning": true,
+					"input": [
+						"text",
+						"image"
+					],
+					"contextWindow": 200000,
+					"maxTokens": 16384
+				}
+			]
+		}
+	},
+	"server": {
+		"port": 3000
+	},
+	"channels": {
+		"feishu": {
+			"enabled": false,
+			"personalOnly": true,
+			"allowedUserIds": []
+		},
+		"wechat": {
+			"enabled": false,
+			"mode": "bridge",
+			"allowedUserIds": [],
+			"sidecarBaseUrl": "http://127.0.0.1:4319"
+		}
+	},
+	"bridge": {
+		"token": ""
+	},
+	"subagents": {
+		"enabled": false
+	},
+	"contentHub": {
+		"type": "github",
+		"owner": "",
+		"repo": "",
+		"ref": "main",
+		"skillsPath": "skill-library",
+		"presetsPath": "workspace-templates",
+		"baseUrl": "",
+		"token": ""
+	},
+	"memory": {
+		"l1Enabled": true,
+		"l2Enabled": true,
+		"l3Enabled": true
+	},
+	"mcp": {
+		"enabled": false
+	},
+	"ui": {
+		"theme": "light",
+		"closeBehavior": "ask",
+		"mathSingleDollar": false
+	},
+	"scheduler": {
+		"timezone": "Asia/Shanghai"
+	},
+	"ocrApi": {
+		"token": "",
+		"model": "PaddleOCR-VL-1.6",
+		"baseUrl": "https://paddleocr.aistudio-app.com/api/v2/ocr/jobs"
+	},
+	"plugins": {
+		"todo": {
+			"enabled": true
+		},
+		"webAccess": {
+			"enabled": true
+		}
+	}
+}
