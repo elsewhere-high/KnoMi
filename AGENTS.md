@@ -5,4 +5,4 @@
 - Node/React/TypeScript 项目，检查为 npm test、npm run build、npm run showcase:build。新界面组件使用 React，中英文文案同步更新。
 - 不删除功能或测试来制造视觉差异。保持权限拒绝底线、审批会话绑定、队列取消和工作区路径边界。
 - 配置与运行路径集中在 runtime.ts；不提交密钥、运行状态、模型对话或用户文件。
-- 第三方许可与素材来源独立保留。项目许可为 MIT，署名 Ustinian。
+- 第三方许可与素材来源独立保留。项目许可为 AGPL-3.0-only，署名 Ustinian5。

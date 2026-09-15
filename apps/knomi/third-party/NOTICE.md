@@ -7,4 +7,4 @@ The source archive and pinned integrity are maintained in the repository's
 
 Provider artwork attribution is included in `web/dist/provider-icons/SOURCES.md`.
 Installed runtime dependencies retain their respective LICENSE and NOTICE files.
-These notices are separate from KnoMi's MIT license.
+These notices are separate from KnoMi's AGPL-3.0-only license.

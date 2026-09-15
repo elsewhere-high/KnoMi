@@ -71,4 +71,4 @@ Web 开发页面位于 <http://localhost:5173>，代理到本地 3000 端口。�
 
 ## 许可
 
-MIT，Copyright (c) 2026 Ustinian。见 [LICENSE](LICENSE)。第三方依赖与模型提供方素材的声明分别保存在 [vendor/THIRD_PARTY_NOTICES.md](vendor/THIRD_PARTY_NOTICES.md) 和 [素材来源](apps/knomi/web/public/provider-icons/SOURCES.md)。
+AGPL-3.0-only，Copyright (c) 2026 Ustinian5。见 [LICENSE](LICENSE)。第三方依赖与模型提供方素材的声明分别保存在 [vendor/THIRD_PARTY_NOTICES.md](vendor/THIRD_PARTY_NOTICES.md) 和 [素材来源](apps/knomi/web/public/provider-icons/SOURCES.md)。

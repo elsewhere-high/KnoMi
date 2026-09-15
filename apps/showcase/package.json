@@ -23,6 +23,6 @@
 		"@types/react-dom": "19.2.3",
 		"@vitejs/plugin-react": "5.2.0"
 	},
-	"author": "Ustinian",
-	"license": "MIT"
+	"author": "Ustinian5",
+	"license": "AGPL-3.0-only"
 }

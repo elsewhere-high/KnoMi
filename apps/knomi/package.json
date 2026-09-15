@@ -47,8 +47,8 @@
 	"devDependencies": {
 		"@types/pino": "^7.0.4"
 	},
-	"author": "Ustinian",
-	"license": "MIT",
+	"author": "Ustinian5",
+	"license": "AGPL-3.0-only",
 	"files": [
 		"dist",
 		"!dist/**/*.test.*",

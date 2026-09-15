@@ -28,7 +28,7 @@ export function AboutSettings() {
 		<SettingsSection title={t("settings.tabs.about")} description={t("settings.sections.about.desc", "服务状态与存储统计")}>
 			<div className="mb-4 flex items-center gap-4 rounded-2xl border border-[var(--knomi-border)] bg-[var(--knomi-accent-soft)] p-5">
 				<BrandMark className="h-12 w-12 shrink-0" />
-				<div><h3 className="text-xl font-semibold text-[var(--knomi-text)]">KnoMi</h3><p className="mt-1 text-sm text-[var(--knomi-text-muted)]">{t("settings.brandDescription")}</p><p className="mt-2 text-xs text-[var(--knomi-text-subtle)]">MIT · © 2026 Ustinian</p></div>
+				<div><h3 className="text-xl font-semibold text-[var(--knomi-text)]">KnoMi</h3><p className="mt-1 text-sm text-[var(--knomi-text-muted)]">{t("settings.brandDescription")}</p><p className="mt-2 text-xs text-[var(--knomi-text-subtle)]">AGPL-3.0-only · © 2026 Ustinian5</p></div>
 			</div>
 			<SettingsCard>
 				<div className="mb-3 flex items-center justify-between">
